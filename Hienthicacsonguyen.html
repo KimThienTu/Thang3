@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien Thi Cac So Nguyen To Dau Tien</title>
+</head>
+<body>
+<script>
+    function checkN(number) {
+        let count = 0;
+        let countN = 0;
+        for (let i = 2; 1 < 1000; i++) {
+            if (countN < number) {
+                for (let j = 1; j <= i; j++) {
+                    if (i % j == 0){
+                        count += 1;
+                    }
+                }
+                if (count == 2) {
+                    document.write(i + "<br>");
+                    countN += 1;
+                }
+                count = 0;
+            } else {
+                break;
+            }
+        }
+    }
+    let number = parseInt(prompt("Nhap N la so nguyen to dau tien"));
+    checkN(number);
+</script>
+</body>
+</html>
